@@ -1,17 +1,18 @@
 import { createRouter, createWebHistory } from "vue-router";
-import DefaultLayout from "../components/DefaultLayout.vue";
-import GuestLayout from "../components/GuestLayout.vue";
-import Home from '../views/Home.vue';
-import MealsByName from '../views/MealsByName.vue';
-import MealsByLetter from '../views/MealsByLetter.vue';
-import MealsByIngredient from '../views/MealsByIngredient.vue';
-import MealDetails from '../views/MealDetails.vue';
+import DefaultLayout from '../components/DefaultLayout.vue';
+import GuestLayout from '../components/GuestLayout.vue';
+import Home from '../views/Home.vue'
+import MealsByIngredient from '../views/MealsByIngredient.vue'
+import MealsByLetter from '../views/MealsByLetter.vue'
+import MealsByName from '../views/MealsByName.vue'
+import MealDetails from '../views/MealDetails.vue'
+import Ingredients from '../views/Ingredients.vue'
 
 const routes = [
   {
-    path: "/",
+    path: '/',
     component: DefaultLayout,
-    children:[
+    children: [
       {
         path: "/",
         name: "home",
@@ -28,20 +29,25 @@ const routes = [
         component: MealsByLetter,
       },
       {
-        path: "/by-ingredients/:ingredient?",
+        path: "/ingredients",
+        name: "ingredients",
+        component: Ingredients,
+      },
+      {
+        path: "/by-ingredient/:ingredient",
         name: "byIngredient",
         component: MealsByIngredient,
       },
       {
-        path: "/meal/:id?",
-        name: "mealDetails",
-        component: MealDetails,
-      },
+        path: '/meal/:id',
+        name: 'mealDetails',
+        component: MealDetails
+      }
     ]
   },
   {
-    path:'/guest',
-    component: GuestLayout,
+    path: '/guest',
+    component: GuestLayout
   }
 ];
 

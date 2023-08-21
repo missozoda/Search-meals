@@ -1,5 +1,5 @@
 <template>
-login page
+  Login page
 </template>
 
 <script setup>
