@@ -1,17 +1,19 @@
 <template>
   <div class="p-8 pb-0">
-    <h1 class="text-4xl font-bold mb-4 text-orange-500">Search Meals by Name</h1>
+    <h1 class="text-4xl font-bold mb-4 text-[#364b4a]">Search Meals by Name</h1>
   </div>
-  <div class="px-8 pb-3">
+  <div class="px-8 py-3 flex items-center justify-between">
     <input
       type="text"
       v-model="keyword"
-      class="rounded border-2 bg-white border-gray-200 focus:ring-orange-500 focus:border-orange-500 w-full"
+      class="rounded border-2 bg-white border-gray-200 focus:ring-[#364b4a] focus:border-[#364b4a] w-full"
       placeholder="Search for Meals"
       @change="searchMeals"
     />
+    <button class="px-4 py-2 ml-4 border-2 border-[#364b4a] bg-[#364b4a] hover:bg-transparent text-white hover:text-[#364b4a] rounded font-medium"
+    @click="searchMeals"
+    >Search</button>
   </div>
-
   <Meals :meals="meals" />
 </template>
 

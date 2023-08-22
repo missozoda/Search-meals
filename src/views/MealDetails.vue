@@ -1,7 +1,7 @@
 <template>
-  <div class="max-w-[800px] mx-auto p-8">
-    <h1 class="text-5xl font-bold mb-5">{{ meal.strMeal }}</h1>
-    <img :src="meal.strMealThumb" :alt="meal.strMeal" class="rounded-md max-w-full">
+  <div class="max-w-[75%] mx-auto p-8 text-center">
+    <h1 class="text-5xl font-bold mb-5 text-[#364b4a]">{{ meal.strMeal }}</h1>
+    <img :src="meal.strMealThumb" :alt="meal.strMeal" class="rounded-md max-w-full mx-auto">
     <div class="grid grid-cols-1 sm:grid-cols-3 text-lg py-2">
       <div>
         <strong class="font-bold">Category:</strong> {{ meal.strCategory }}
@@ -14,11 +14,11 @@
       </div>
     </div>
 
-    <div class="my-3">
+    <div class="my-4 text-justify">
       {{ meal.strInstructions }}
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2">
+    <div class="grid grid-cols-1 sm:grid-cols-2 text-left">
       <div class="">
         <h2 class="text-2xl font-semibold mb-2">Ingredients</h2>
         <ul>
@@ -41,12 +41,12 @@
         </ul>
       </div>
 
-      <div class="mt-4">
+      <div class="mt-8">
         <YoutubeButton :href="meal.strYoutube"/>
         <a
           :href="meal.strSource"
           target="_blank"
-          class="ml-3 px-3 py-2 rounded border-2 border-transparent text-indigo-600 transition-colors hover:bg-indigo-600 hover:text-white"
+          class="ml-3 px-3 py-2 rounded border-2 border-transparent text-[#616974] transition-colors hover:bg-[#616974] hover:text-white"
         >
           View Original Source
         </a>
